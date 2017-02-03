@@ -35,10 +35,13 @@ ModelImporter:
     4300006: Door_R
     4300008: DoorHitbox_R
     7400000: Default Take
+    7400002: ArmatureAction
     9500000: //RootNode
     13700000: Door_L
     13700002: Door_R
     13700004: Doorframe
+    13700006: DoorHitbox_L
+    13700008: DoorHitbox_R
   materials:
     importMaterials: 1
     materialName: 0
@@ -85,6 +88,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -95,7 +99,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
