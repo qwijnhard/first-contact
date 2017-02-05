@@ -16,6 +16,8 @@ public class HighlightableObject : MonoBehaviour {
     public Material normal;
     public Material glowing;
 
+    public bool isGlowing = false;
+
    /* void Update()
     {
         if (Input.GetButton("Fire1"))
@@ -39,11 +41,13 @@ public class HighlightableObject : MonoBehaviour {
             if (GetComponent<Renderer>() != null)
             {
                 this.GetComponent<Renderer>().material = glowing;
+                isGlowing = true;
             }
 
             if (GetComponent<SkinnedMeshRenderer>() != null)
             {
                 this.GetComponent<SkinnedMeshRenderer>().material = glowing;
+                isGlowing = true;
             }
 
             if(this.transform.childCount > 0)
@@ -81,11 +85,13 @@ public class HighlightableObject : MonoBehaviour {
             if (GetComponent<Renderer>() != null)
             {
                 this.GetComponent<Renderer>().material = normal;
+                isGlowing = false;
             }
 
             if (GetComponent<SkinnedMeshRenderer>() != null)
             {
                 this.GetComponent<SkinnedMeshRenderer>().material = normal;
+                isGlowing = false;
             }
 
             if (this.transform.childCount > 0)
