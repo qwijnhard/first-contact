@@ -20,12 +20,16 @@ public class FadingObject : MonoBehaviour {
     public bool needsToToggle = false;
 
 	void Start () {
+
+        //got a renderer? cool. rend is now that renderer
         if (this.gameObject.GetComponent<Renderer>() != null) {
             rend = this.gameObject.GetComponent<Renderer>();
         }
 	}
 	
 	void Update () {
+
+        //if needstotoggle, check which action you need to perform
 		if(!faded && needsToToggle)
         {
             FadeAll();
@@ -40,16 +44,16 @@ public class FadingObject : MonoBehaviour {
     void Fade()
     {
         rend.material = transparant;
-        Debug.Log("material set to trans");
+        //Debug.Log("material set to trans");
         faded = true;
-        Debug.Log(faded);
+        //Debug.Log(faded);
         needsToToggle = false;
     }
 
     void Unfade()
     {
         rend.material = normal;
-        Debug.Log("material set to norm");
+        //Debug.Log("material set to norm");
         faded = false;
         needsToToggle = false;
     }
