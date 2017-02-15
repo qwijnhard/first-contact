@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tags : MonoBehaviour {
 
-    public bool Player = false;
+    public bool player = false;
+    public bool Wall = false;
 
 }

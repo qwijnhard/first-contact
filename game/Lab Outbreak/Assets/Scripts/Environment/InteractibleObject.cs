@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class InteractibleObject : HighlightableObject {
     //inherits Highlight() from highlightableObject as well as normal and glowing material vars
-
-
+    
     public bool playerNear = false;
     
-	void Start () {
-		
-	}
-	
 	void Update () {
 
         if(playerNear && !isHighlighted)

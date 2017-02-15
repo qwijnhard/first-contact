@@ -18,7 +18,24 @@ public class HighlightableObject : MonoBehaviour {
 
     public bool isHighlighted = false;
 
-   /* void Update()
+    private Renderer thisRenderer;
+
+    void Start()
+    {
+        if(normal == null && GetComponent<Renderer>() != null || glowing == null && GetComponent<SkinnedMeshRenderer>() != null ||
+            normal == null && GetComponent<SkinnedMeshRenderer>() != null || glowing == null && GetComponent<Renderer>() != null)
+        {
+            Debug.Log("Hey check to see if "+ this.gameObject.name + " has normal and glowing materials attached to it!");
+        }
+
+        if(GetComponent<Renderer>() != null)
+        {
+            thisRenderer = this.GetComponent<Renderer>();
+        }
+    }
+
+   /* for testing purposes
+   void Update()
     {
         if (Input.GetButton("Fire1"))
         {
@@ -37,19 +54,14 @@ public class HighlightableObject : MonoBehaviour {
     public virtual void Highlight()
     {
         //if i have any kind of rnderer, set its material to the material assigned to "glowing"
-        if (GetComponent<Renderer>() != null || GetComponent<SkinnedMeshRenderer>() != null)
+        if (GetComponent<Renderer>() != null)
         {
-            if (GetComponent<Renderer>() != null)
+            if (thisRenderer != null)
             {
-                this.GetComponent<Renderer>().material = glowing;
+                thisRenderer.material = glowing;
                 isHighlighted = true;
             }
-
-            if (GetComponent<SkinnedMeshRenderer>() != null)
-            {
-                this.GetComponent<SkinnedMeshRenderer>().material = glowing;
-                isHighlighted = true;
-            }
+            
 
             //do i have a child? if yes, then make all direct children use Highlight()
             if(this.transform.childCount > 0)
@@ -65,7 +77,7 @@ public class HighlightableObject : MonoBehaviour {
         }
 
         //do i have any kind of renderer? if not, then if i have any direct children, make them all use Highlight()  **(why would i not have a renderer OR children?)
-        if (GetComponent<Renderer>() == null && GetComponent<SkinnedMeshRenderer>() == null)
+        if (thisRenderer == null)
         {
             if (this.transform.childCount > 0)
             {
@@ -83,18 +95,11 @@ public class HighlightableObject : MonoBehaviour {
     //does the exact same as Highlght(), except, this changes the texture to "normal" instead of "glowing"
     public virtual void Unlight()
     {
-        if (GetComponent<Renderer>() != null || GetComponent<SkinnedMeshRenderer>() != null)
+        if (GetComponent<Renderer>() != null)
         {
-            if (GetComponent<Renderer>() != null)
+            if (thisRenderer != null)
             {
                 this.GetComponent<Renderer>().material = normal;
-                Debug.Log("Setting isHighlighted to false");
-                isHighlighted = false;
-            }
-
-            if (GetComponent<SkinnedMeshRenderer>() != null)
-            {
-                this.GetComponent<SkinnedMeshRenderer>().material = normal;
                 Debug.Log("Setting isHighlighted to false");
                 isHighlighted = false;
             }
@@ -111,7 +116,7 @@ public class HighlightableObject : MonoBehaviour {
             }
         }
 
-        if (GetComponent<Renderer>() == null && GetComponent<SkinnedMeshRenderer>() == null)
+        if (thisRenderer == null)
         {
             if (this.transform.childCount > 0)
             {
