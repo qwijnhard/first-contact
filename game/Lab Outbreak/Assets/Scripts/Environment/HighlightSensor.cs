@@ -14,10 +14,10 @@ public class HighlightSensor : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("Exit confirmed");
+        //Debug.Log("Exit confirmed");
         if (other.gameObject.GetComponent<Tags>().player)
         {
-            Debug.Log("Exit by player confirmed");
+            //Debug.Log("Exit by player confirmed");
             GetComponentInParent<InteractibleObject>().playerNear = false;
         }
     }

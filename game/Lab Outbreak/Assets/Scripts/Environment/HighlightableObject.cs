@@ -53,6 +53,7 @@ public class HighlightableObject : MonoBehaviour {
     //sets own material to glowing if it has a renderer, then makes all children repeat. if this has no renderer, only make all children repeat.
     public virtual void Highlight()
     {
+        //Debug.Log("correctly performing Highlight()");
         //if i have any kind of rnderer, set its material to the material assigned to "glowing"
         if (GetComponent<Renderer>() != null)
         {
@@ -100,7 +101,7 @@ public class HighlightableObject : MonoBehaviour {
             if (thisRenderer != null)
             {
                 this.GetComponent<Renderer>().material = normal;
-                Debug.Log("Setting isHighlighted to false");
+                //Debug.Log("Setting isHighlighted to false");
                 isHighlighted = false;
             }
 

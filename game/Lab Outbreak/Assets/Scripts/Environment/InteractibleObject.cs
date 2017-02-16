@@ -7,7 +7,7 @@ public class InteractibleObject : HighlightableObject {
     
     public bool playerNear = false;
     
-	void Update () {
+	public virtual void Update () {
 
         if(playerNear && !isHighlighted)
         {
@@ -15,9 +15,9 @@ public class InteractibleObject : HighlightableObject {
             isHighlighted = true;
         }
 
-        if(!playerNear && isHighlighted) //this isn't triggering. why isn't this triggering? im so triggered...
+        if(!playerNear && isHighlighted)
         {
-            Debug.Log("Using Unlight confirmed");
+            //Debug.Log("Using Unlight confirmed");
             Unlight();
             isHighlighted = false;
         }
