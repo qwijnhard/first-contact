@@ -10,6 +10,7 @@ public class PlayerControlScript : MonoBehaviour {
 
     private float moveX;
     private float moveZ;
+    public int moveSpeed = 200;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class PlayerControlScript : MonoBehaviour {
         inputH = Input.GetAxis("Horizontal");
         inputV = Input.GetAxis("Vertical");
 
-        moveX = inputH * 250 * Time.deltaTime;
-        moveZ = inputV * 250 * Time.deltaTime;
+        moveX = inputH * moveSpeed * Time.deltaTime;
+        moveZ = inputV * moveSpeed * Time.deltaTime;
     }
 }

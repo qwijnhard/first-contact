@@ -25,7 +25,7 @@ public class HighlightableObject : MonoBehaviour {
         if(normal == null && GetComponent<Renderer>() != null || glowing == null && GetComponent<SkinnedMeshRenderer>() != null ||
             normal == null && GetComponent<SkinnedMeshRenderer>() != null || glowing == null && GetComponent<Renderer>() != null)
         {
-            Debug.Log("Hey check to see if "+ this.gameObject.name + " has normal and glowing materials attached to it!");
+            Debug.Log("Hey check to see if "+ this.transform.parent.name +"'s child: "+this.gameObject.name+ " has normal and glowing materials attached to it!");
         }
 
         if(GetComponent<Renderer>() != null)

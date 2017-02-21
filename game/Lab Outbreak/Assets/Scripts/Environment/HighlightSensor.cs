@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HighlightSensor : MonoBehaviour {
-    
+public class HighlightSensor : MonoBehaviour
+{
+
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Tags>().player)
