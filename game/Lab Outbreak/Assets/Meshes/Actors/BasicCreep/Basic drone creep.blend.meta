@@ -1,0 +1,634 @@
+fileFormatVersion: 2
+guid: 6ab838e08aebf9c429bc2e62b42dee0d
+timeCreated: 1490701483
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: ArmBoneLow_L
+    100004: ArmBoneLow_R
+    100006: ArmBoneUp_L
+    100008: ArmBoneUp_R
+    100010: //RootNode
+    100012: Drone
+    100014: HeadBone
+    100016: HipBone
+    100018: NeckBone
+    100020: ScytheBone_L
+    100022: ScytheBone_r
+    100024: ShoulderBone_L
+    100026: ShoulderBone_R
+    100028: TailBone_001
+    100030: TailBone_002
+    100032: TailBone_003
+    100034: TailBone_004
+    100036: TailBone_005
+    100038: TailBone_006
+    100040: TorsoLowBone
+    100042: TorsoUpBone
+    400000: Armature
+    400002: ArmBoneLow_L
+    400004: ArmBoneLow_R
+    400006: ArmBoneUp_L
+    400008: ArmBoneUp_R
+    400010: //RootNode
+    400012: Drone
+    400014: HeadBone
+    400016: HipBone
+    400018: NeckBone
+    400020: ScytheBone_L
+    400022: ScytheBone_r
+    400024: ShoulderBone_L
+    400026: ShoulderBone_R
+    400028: TailBone_001
+    400030: TailBone_002
+    400032: TailBone_003
+    400034: TailBone_004
+    400036: TailBone_005
+    400038: TailBone_006
+    400040: TorsoLowBone
+    400042: TorsoUpBone
+    4300000: Drone
+    7400000: Default Take
+    7400002: ArmatureAction_001
+    7400004: Idle
+    7400006: Move
+    7400008: Attack1
+    7400010: Attack2
+    7400012: Hurt
+    7400014: Death
+    9500000: //RootNode
+    13700000: Drone
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 434
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HipBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone/HeadBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L/ScytheBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R/ScytheBone_r
+        weight: 1
+      - path: Armature/TailBone_001
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005/TailBone_006
+        weight: 1
+      - path: Drone
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 119
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HipBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone/HeadBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L/ScytheBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R/ScytheBone_r
+        weight: 1
+      - path: Armature/TailBone_001
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005/TailBone_006
+        weight: 1
+      - path: Drone
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Move
+      takeName: Default Take
+      firstFrame: 130
+      lastFrame: 189
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HipBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone/HeadBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L/ScytheBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R/ScytheBone_r
+        weight: 1
+      - path: Armature/TailBone_001
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005/TailBone_006
+        weight: 1
+      - path: Drone
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack1
+      takeName: Default Take
+      firstFrame: 200
+      lastFrame: 249
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HipBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone/HeadBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L/ScytheBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R/ScytheBone_r
+        weight: 1
+      - path: Armature/TailBone_001
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005/TailBone_006
+        weight: 1
+      - path: Drone
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack2
+      takeName: Default Take
+      firstFrame: 260
+      lastFrame: 319
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HipBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone/HeadBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L/ScytheBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R/ScytheBone_r
+        weight: 1
+      - path: Armature/TailBone_001
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005/TailBone_006
+        weight: 1
+      - path: Drone
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hurt
+      takeName: Default Take
+      firstFrame: 330
+      lastFrame: 369
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HipBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone/HeadBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L/ScytheBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R/ScytheBone_r
+        weight: 1
+      - path: Armature/TailBone_001
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005/TailBone_006
+        weight: 1
+      - path: Drone
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Default Take
+      firstFrame: 380
+      lastFrame: 434
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/HipBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/NeckBone/HeadBone
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_L/ArmBoneUp_L/ArmBoneLow_L/ScytheBone_L
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R
+        weight: 1
+      - path: Armature/HipBone/TorsoLowBone/TorsoUpBone/ShoulderBone_R/ArmBoneUp_R/ArmBoneLow_R/ScytheBone_r
+        weight: 1
+      - path: Armature/TailBone_001
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005
+        weight: 1
+      - path: Armature/TailBone_001/TailBone_002/TailBone_003/TailBone_004/TailBone_005/TailBone_006
+        weight: 1
+      - path: Drone
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

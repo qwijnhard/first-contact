@@ -7,7 +7,7 @@ public class FadingObject : MonoBehaviour {
     /*
     this class needs to be given to a walls object and all its wall children
 
-        if this collides with the WallVisionObject, it sends a signal to its walls parent if it has one
+        if this collides with the WallVisionObject (player child), it sends a signal to its walls parent if it has one
         if this object is the walls parent, make all children run Fade()
     */
 

@@ -7,5 +7,6 @@ public class Tags : MonoBehaviour {
     public bool player = false;
     public bool Wall = false;
     public bool enemy = false;
+    public bool NPC = false;
 
 }
