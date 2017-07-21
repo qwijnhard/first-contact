@@ -7,6 +7,10 @@ public class BasicMonsterAI : MonoBehaviour {
 
     private NavMeshAgent nav;
 
+    //used to switch between chasing and attacking
+    private bool chasing;
+    private float attackRange;
+
     //object's AI thought process state
     private string state = "Idle";
 
@@ -22,7 +26,7 @@ public class BasicMonsterAI : MonoBehaviour {
     public float idleMin;
     public float idleMax;
 
-    //animation state triggers for the object's child object with an animator
+    //animation state triggers for the object's child object with an animator (see MonsterAnimScript.cs)
     public bool moving;
     public bool attacking;
     public bool dead;
@@ -38,8 +42,8 @@ public class BasicMonsterAI : MonoBehaviour {
 	
 	void Update ()
     {
-        //if you have a target, chase it
-        if(target != null)
+        //if you have a target, chase it 
+        if(target != null && chasing)
         {
             nav.SetDestination(target.transform.position);
         }
@@ -49,10 +53,15 @@ public class BasicMonsterAI : MonoBehaviour {
     {
         if (state == "Idle")
         {
+            //set "target" to null
             //[if you're not moving]
             //wait for a random amount of time between "idleMin" & "idleMax"
             //select random waypoint, move to waypoint
             //[if you're not moving]
+            if(target != null)
+            {
+                target = null;
+            }
 
             if (!moving && !coroutineTriggered)
             {
@@ -70,7 +79,6 @@ public class BasicMonsterAI : MonoBehaviour {
 
         if (state == "Searching")
         {
-            //set "target" to null
             //start "suspicion" timer, set waypoint near player, go to waypoint, wait, set new waypoint with decreased accuracy, repeat.
             //if "suspicion timer runs out, set state to Idle"
             //if player enters sight, set state to "hostile"
@@ -79,7 +87,9 @@ public class BasicMonsterAI : MonoBehaviour {
 
         if (state == "Hostile")
         {
-            //move to player until in attack range, then attack
+            //set "target" to player or w/e, set chasing to true while distance > attackRange
+            //if disntace <= attackRange && facing target set chasing to false and attacking to true
+            //while attacking, object can't walk
             //if player leaves sight radius, start "track" timer
             //if track timer runs out, set state to "searching"
         }
