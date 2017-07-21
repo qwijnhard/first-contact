@@ -88,8 +88,8 @@ public class BasicMonsterAI : MonoBehaviour {
         if (state == "Hostile")
         {
             //set "target" to player or w/e, set chasing to true while distance > attackRange
-            //if disntace <= attackRange && facing target set chasing to false and attacking to true
-            //while attacking, object can't walk
+            //if distance <= attackRange set chasing to false and attacking to true
+            //while attacking, nav.setDestination(null); transform.LookAt(target.transform);
             //if player leaves sight radius, start "track" timer
             //if track timer runs out, set state to "searching"
         }
