@@ -56,13 +56,15 @@ public class BasicMonsterAI : MonoBehaviour {
 
         baseChaseTimer = chaseTimer;
         baseSuspicionTimer = suspicionTimer;
+        chaseTimer = 0;
+        suspicionTimer = 0;
 
 	}
-	
-	void Update ()
+
+    void Update()
     {
         //if you have a target, chase it 
-        if(target != null && chasing)
+        if (target != null && chasing)
         {
             nav.SetDestination(target.transform.position);
         }
@@ -70,12 +72,16 @@ public class BasicMonsterAI : MonoBehaviour {
         if (chaseTimer > 0) {
             chaseTimer -= Time.deltaTime;
         }
-        if(suspicionTimer > 0)
+        if (suspicionTimer > 0)
         {
             suspicionTimer -= Time.deltaTime;
         }
-        
 
+        if (state == "Hostile")
+        {
+            chasing = true;
+        }
+        else { chasing = false; }
     }
 
     private void FixedUpdate()
@@ -101,7 +107,7 @@ public class BasicMonsterAI : MonoBehaviour {
 
         if (state == "Searching")
         {
-            //start "suspicion" timer, set waypoint near player, go to waypoint, wait, set new waypoint with decreased accuracy, repeat.
+            //start "suspicion" timer, while suspicion timer > 0: set waypoint near player, go to waypoint, wait, set new waypoint with decreased accuracy, repeat.
 
             //if "suspicion timer runs out, set state to Idle"
             //if player enters sight, set state to "hostile"
@@ -161,7 +167,7 @@ public class BasicMonsterAI : MonoBehaviour {
         {
             GameObject suspect;
 
-            //if you see anything and you have no target, check its faction, then do either nothing or set it as "target"
+            //if you see anything, check its faction, then do either nothing or set it as "target"
             if (eyesConeInput.GetComponent<Tags>() != null)
             {
                 suspect = eyesConeInput;
@@ -169,12 +175,14 @@ public class BasicMonsterAI : MonoBehaviour {
                 {
                     //if the object's faction is player, set it as target, then "see" the target
                     RaycastHit rayHit;
-                    if (Physics.Linecast(eyes.position, suspect.transform.position, out rayHit))
+                    if (Physics.Linecast(transform.position, suspect.transform.position, out rayHit)) //<======= this is merely a bool. if yes, execute everything below
                     {
+                        Debug.Log("looking at "+ rayHit.collider.gameObject.name);  // <==== always correctly displays what is actually being looked at
                         target = eyesConeInput;
-                        Debug.Log(target.name + " found");
+                        Debug.Log(target.name + " found"); // <==== always displays player if it is intersecting eyes childobject
                         suspect = null;
                         chaseTimer = baseChaseTimer;
+                        suspicionTimer = 0;
                         
                     }
                 }
@@ -207,7 +215,7 @@ public class BasicMonsterAI : MonoBehaviour {
         //################################
 
         //huh. must've run off.
-        if (state == "Searching" && suspicionTimer <= 0)
+        if (state == "Searching" && suspicionTimer <= 0 && chaseTimer <= 0)
         {
             state = "Idle";
 

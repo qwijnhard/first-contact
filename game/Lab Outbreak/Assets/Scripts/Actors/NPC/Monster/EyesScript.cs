@@ -9,11 +9,12 @@ public class EyesScript : MonoBehaviour {
 	}
 	
 	void Update () {
-		
+        
 	}
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         GetComponentInParent<BasicMonsterAI>().Sight(other.gameObject);
+        Debug.DrawLine(GetComponentInParent<Transform>().position, other.transform.position, Color.blue);
     }
 }
