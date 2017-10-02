@@ -15,10 +15,13 @@ public class BasicMonsterAI : MonoBehaviour {
     private string state = "Idle";
 
     private string previousState; //use this if monsters go back to previous state if de-aggroed
-    
+
+    //the eyes object
+    public Transform eyes;
+
     //read positions of these objects to set as patrolling markers
     public GameObject[] patrolpoints;
-
+    
     //object to be chased
     private GameObject target;
     
@@ -54,10 +57,10 @@ public class BasicMonsterAI : MonoBehaviour {
         if (state == "Idle")
         {
             //set "target" to null
-            //[if you're not moving]
+            //[if you're not moving:]
             //wait for a random amount of time between "idleMin" & "idleMax"
             //select random waypoint, move to waypoint
-            //[if you're not moving]
+            //[/if you're not moving]
             if(target != null)
             {
                 target = null;
@@ -74,6 +77,9 @@ public class BasicMonsterAI : MonoBehaviour {
                 moving = false;
             }
             //if player enters sight, set state to "hostile"
+
+            
+
             //if player directly damages, set state to "hostile"
         }
 
@@ -121,6 +127,31 @@ public class BasicMonsterAI : MonoBehaviour {
         nav.SetDestination(navHit.position);
         moving = true;
         coroutineTriggered = false;
+    }
+
+    //this function is called by the eyes childobject whenever something collides with it
+    public void Sight(GameObject eyesConeInput)
+    {
+
+        if (GetComponent<Tags>().alive)
+        {
+            //if you see anything and you have no target, check its faction, then do either nothing or set it as "target"
+            if (target == null && eyesConeInput.GetComponent<Tags>() != null)
+            {
+                if (eyesConeInput.GetComponent<Tags>().player)
+                {
+                    //if the object's faction is player, set it as target, then "see" the target
+                    target = eyesConeInput;
+                    RaycastHit rayHit;
+                    if (Physics.Linecast(eyes.position, target.transform.position, out rayHit))
+                    {
+                        Debug.Log("player found");
+                    }
+                }
+            }
+        }
+
+        
     }
 
 }
