@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class BasicMonsterAI : MonoBehaviour {
 
     private NavMeshAgent nav;
+    //model position
+    private GameObject model;
 
     //used to switch between chasing and attacking
     private bool chasing;
@@ -53,6 +55,7 @@ public class BasicMonsterAI : MonoBehaviour {
 	void Start () {
 
         nav = GetComponent<NavMeshAgent>();
+        model = transform.Find("Basic drone creep").gameObject;
 
         baseChaseTimer = chaseTimer;
         baseSuspicionTimer = suspicionTimer;
@@ -175,15 +178,20 @@ public class BasicMonsterAI : MonoBehaviour {
                 {
                     //if the object's faction is player, set it as target, then "see" the target
                     RaycastHit rayHit;
-                    if (Physics.Linecast(transform.position, suspect.transform.position, out rayHit)) //<======= this is merely a bool. if yes, execute everything below
+                    if (Physics.Linecast(model.transform.position, suspect.transform.position, out rayHit, int.MaxValue - (1 << 2))) //<======= this is merely a bool. if yes, execute everything below
                     {
+                        Debug.DrawLine(model.transform.position, suspect.transform.position, Color.blue);
                         Debug.Log("looking at "+ rayHit.collider.gameObject.name);  // <==== always correctly displays what is actually being looked at
-                        target = eyesConeInput;
-                        Debug.Log(target.name + " found"); // <==== always displays player if it is intersecting eyes childobject
-                        suspect = null;
-                        chaseTimer = baseChaseTimer;
-                        suspicionTimer = 0;
-                        
+                        if (suspect.name == rayHit.collider.gameObject.name)
+                        {
+                            target = eyesConeInput;
+                            Debug.Log(target.name + " found"); // <==== always displays player if it is intersecting eyes childobject
+                            suspect = null;
+                            chaseTimer = baseChaseTimer;
+                            suspicionTimer = 0;
+
+                        }
+
                     }
                 }
             }

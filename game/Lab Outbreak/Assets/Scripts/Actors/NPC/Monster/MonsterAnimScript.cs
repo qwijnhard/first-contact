@@ -5,43 +5,43 @@ using UnityEngine;
 public class MonsterAnimScript : MonoBehaviour {
 
     private Animator anim;
+    private BasicMonsterAI ai;
 
 	void Start () {
 
         anim = this.GetComponent<Animator>();
+        ai = GetComponentInParent<BasicMonsterAI>();
 
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
 
-        if (GetComponentInParent<BasicMonsterAI>().moving)
+        if (ai.moving)
         {
             anim.SetBool("moving", true);
         }
-
-        if (!GetComponentInParent<BasicMonsterAI>().moving)
+        else
         {
             anim.SetBool("moving", false);
         }
 
-        if (!GetComponentInParent<BasicMonsterAI>().attacking)
+        if (ai.attacking)
         {
             anim.SetBool("attacking", true);
         }
-
-        if (!GetComponentInParent<BasicMonsterAI>().attacking)
+        else
         {
             anim.SetBool("attacking", false);
         }
 
-        if (!GetComponentInParent<BasicMonsterAI>().dead)
+        if (ai.dead)
         {
             anim.SetBool("dead", true);
         }
-
-        if (!GetComponentInParent<BasicMonsterAI>().dead)
+        else
         {
             anim.SetBool("dead", false);
         }

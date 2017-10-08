@@ -15,6 +15,6 @@ public class EyesScript : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
         GetComponentInParent<BasicMonsterAI>().Sight(other.gameObject);
-        Debug.DrawLine(GetComponentInParent<Transform>().position, other.transform.position, Color.blue);
+        //Debug.DrawLine(GetComponentInParent<Transform>().position, other.transform.position, Color.blue);
     }
 }
